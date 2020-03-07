@@ -70,7 +70,9 @@ const sendSpecificGunOrMap = (message, request) => {
 
 const randomMapGen = (message) => {
   const randomMapIndex = Math.floor(Math.random() * mapsArr.length);
-  return message.channel.send(`${mapsArr[randomMapIndex]}: ${maps[randomMapGen]}`);
+  const mapName = mapsArr[randomMapIndex];
+  const mapLink = maps[mapName];
+  return message.channel.send(`${mapName}: ${mapLink}`);
 };
 
 bot.on('ready', () => {

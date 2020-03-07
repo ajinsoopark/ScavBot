@@ -1,7 +1,7 @@
 const capitalized = (string) => string.charAt(0).toUpperCase() + string.substring(1);
 
 const invalidCommand = (message) => {
-  const userTag = message.member.user.tag;
+  const userTag = message.member.displayname;
   return `Invalid command dumb betch ${userTag}. Type ??help`;
 };
 
