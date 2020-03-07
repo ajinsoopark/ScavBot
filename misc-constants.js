@@ -9,8 +9,8 @@ const COMMANDS = {
   GUN_SPECIFIC: { command: '[gun_name]', description: 'Top 3 bullets and link to best recoil mods' },
   MAP_SPECIFIC: { command: '[map_name]', description: 'Link to specific map' },
   AMMO: { command: 'ammo', description: 'List of top 3 ammos by caliber' },
+  RANDOM_MAP: { command: 'rollMap', description: 'Random map generator' },
 };
-const INVALID_COMMAND = '`Invalid Command Dumb Betch for help enter **??help**`';
 const EZ_AMMO = 'https://i.redd.it/eawzvoj4blc41.png';
 const PREFIX = '??';
 const HIDEOUT = 'https://gamepedia.cursecdn.com/escapefromtarkov_gamepedia/3/39/Hideout-Requirements-Items-to-Keep.jpg?version=20936dd7e636a9e49aecfc500a993ee7';
@@ -19,7 +19,6 @@ const AMMO_SHEET = 'https://docs.google.com/spreadsheets/d/1VuxGkweKB118mF1kcBmV
 
 
 module.exports = {
-  INVALID_COMMAND,
   COMMANDS,
   EZ_AMMO,
   PREFIX,

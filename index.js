@@ -4,9 +4,9 @@ const { RichEmbed, Client } = require('discord.js');
 const { guns } = require('./weapon-constants.js');
 const { maps } = require('./map-constants.js');
 const { ammo } = require('./ammo-constants.js');
-const { capitalized } = require('./utils.js');
+const { capitalized, invalidCommand } = require('./utils.js');
 const {
-  INVALID_COMMAND, EZ_AMMO, PREFIX, COMMANDS, HIDEOUT, WEAPONS_SHEET, AMMO_SHEET,
+  EZ_AMMO, PREFIX, COMMANDS, HIDEOUT, WEAPONS_SHEET, AMMO_SHEET,
 } = require('./misc-constants.js');
 
 const bot = new Client();
@@ -64,7 +64,13 @@ const sendSpecificGunOrMap = (message, request) => {
   } if (mapsArr.includes(request)) {
     return message.channel.send(`<${maps[request]}>`);
   }
-  return message.channel.send(INVALID_COMMAND);
+  const invalidCommandRes = invalidCommand(message);
+  return message.channel.send(invalidCommandRes);
+};
+
+const randomMapGen = (message) => {
+  const randomMapIndex = Math.floor(Math.random() * mapsArr.length);
+  return message.channel.send(`${mapsArr[randomMapIndex]}: ${maps[randomMapGen]}`);
 };
 
 bot.on('ready', () => {
@@ -107,6 +113,10 @@ bot.on('message', (message) => {
     }
     case COMMANDS.AMMO_SHEET.command: {
       message.channel.send(`<${AMMO_SHEET}>`);
+      return;
+    }
+    case COMMANDS.RANDOM_MAP.command: {
+      randomMapGen(message);
       return;
     }
     default: sendSpecificGunOrMap(message, request);
