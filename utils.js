@@ -7,7 +7,7 @@ const removeTagFromName = (tag) => {
 };
 
 const invalidCommand = (message) => {
-  const userTag = message.member.displayname;
+  const userTag = message.member.user.tag;
   const user = removeTagFromName(userTag);
   return `Invalid command dumb betch ${user}. Type ??help`;
 };
