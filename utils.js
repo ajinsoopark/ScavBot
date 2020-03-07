@@ -2,7 +2,8 @@ const capitalized = (string) => string.charAt(0).toUpperCase() + string.substrin
 
 const removeTagFromName = (tag) => {
   const tagArr = tag.split('');
-  const authorName = tagArr.splice(-1, 5).join('');
+  tagArr.splice(-1, 5);
+  const authorName = tagArr.join('');
   return authorName;
 };
 
