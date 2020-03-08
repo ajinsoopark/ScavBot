@@ -4,7 +4,7 @@ const maps = {
   shoreline: 'https://preview.redd.it/1cflhynure641.jpg?width=3840&format=pjpg&auto=webp&s=9457d811e71ed10d833203f8ce70cea4b13d2ba1',
   interchange: 'https://gamepedia.cursecdn.com/escapefromtarkov_gamepedia/0/06/InterchangeMapLorathor.jpg?version=2880f134180975c58d5c4dcef4327ef4',
   factory: 'https://external-preview.redd.it/tPt0xrxbfSR4aN4E7p8jGLa4Cc2druBnKZ0tbHjpD3I.png?auto=webp&s=f16e113034c7e6b38b59eb102d12ba8364987d10',
-  labs: 'https://i.redd.it/el7cgdzcno721.jpg',
+  labs: 'https://i.imgur.com/n1r4Ico.png',
   reserve: 'https://gamepedia.cursecdn.com/escapefromtarkov_gamepedia/9/9f/Keys_and_doors_v3.png?version=2cb6d8d74e6f3a52b8af30ca93bc86f5',
 };
 
